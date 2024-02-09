@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+
+<html>
+{% block contents %}
+    <link rel="stylesheet" href="/static/main.css" />
+    <div class="row mt-5">
+    <div class="col-12">
+        <div class="form-group">
+            <form action="createform/" method="GET">
+                {% csrf_token %}
+                <select name="invest">
+                    <option value="Seed"> Seed
+                    <option value="pre-A"> pre-A
+                    <option value="Series-A"> Series-A
+                    <option value="Series-B"> Series-B
+                    <option value="Series-C"> Series-C
+                    <option value="Series-D"> Series-D
+                    <option value="Series-E"> Series-E
+                    <option value="Series-F"> Series-F
+                    <option value="Series-G"> Series-G
+                    <option value="M&A"> M&A
+                    <option value="IPO"> IPO
+                </select>
+                
+                <label for="money">영업이익</label>
+                <input type="text" id="money" name="money"  />
+                <label for="moneya">순이익</label>
+                <input type="text" id="moneya" name="moneya"  />
+                <label for="moneyb">자본</label>
+                <input type="text" id="moneyb" name="moneyb"  />
+                <label for="moneyc">자산</label>
+                <input type="text" id="moneyc" name="moneyc"  />
+                <label for="employee">고용인원</label>
+                <input type="text" id="employee" name="employee"  />
+                
+                <input type="submit" value="제출">
+            </form>
+            
+        </div>
+        
+    </div>
+    </div>
+    {% endblock %}
+</html>

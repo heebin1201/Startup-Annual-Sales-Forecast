@@ -1,0 +1,171 @@
+
+<!DOCTYPE HTML>
+<html>
+    <body>
+
+
+        <section id="banner">
+            <div class="inner">
+                <header>
+                    <h1>Hope Valley</h1>
+                </header>
+
+                <!-- <div class="flex ">
+
+                    <div>
+                        <span class="icon fa-car"></span>
+                        <h3>Aliquam</h3>
+                        <p>Suspendisse amet ullamco</p>
+                    </div>
+
+                    <div>
+                        <span class="icon fa-camera"></span>
+                        <h3>Elementum</h3>
+                        <p>Class aptent taciti ad litora</p>
+                    </div>
+
+                    <div>
+                        <span class="icon fa-bug"></span>
+                        <h3>Ultrices</h3>
+                        <p>Nulla vitae mauris non felis</p>
+                    </div>
+
+                </div> -->
+
+                <!-- <footer>
+                    <a href="#" class="button">Get Started</a>
+                </footer> -->
+            </div>
+        </section>
+        <link rel="stylesheet" href="/static/main.css?after" />
+        {% block contents %}
+        <div class="row mt-5">
+        <div class="col-12">
+            <div class="form-group" style="">
+                <form action="createform/" method="GET" style="box-sizing: border-box; justify-content: space-around;">
+                    {% csrf_token %}
+                    <div class="col-13">
+                        <p>
+                            <label for="invest">투자단계</label>
+                            <select name="invest">
+                                <option value="Seed"> Seed
+                                <option value="pre-A"> pre-A
+                                <option value="Series-A"> Series-A
+                                <option value="Series-B"> Series-B
+                                <option value="Series-C"> Series-C
+                                <option value="Series-D"> Series-D
+                                <option value="Series-E"> Series-E
+                                <option value="Series-F"> Series-F
+                                <option value="Series-G"> Series-G
+                                <option value="M&A"> M&A
+                                <option value="IPO"> IPO
+
+                            </select>
+                        </p>
+                        
+                        <p>
+                            <label for="address">주소</label>
+                            <input type="text" autocomplete="off" id="address" name="address"  />
+                            </p>
+                            <p>
+                            <label for="people">고용인원</label>
+                            <input type="text" autocomplete="off" id="people" name="people"  />
+                            </p>
+                            <p>
+                            <label for="leave">연간 퇴사율</label>
+                            <input type="text" autocomplete="off" id="leave" name="leave"  />
+                            </p>
+                            <p>
+                            <label for="invest_cnt">총 투자자 수</label>
+                            <input type="text" autocomplete="off" id="invest_cnt" name="invest_cnt"  />
+                            </p>  
+                            <p>     
+                            <label for="money">자본금</label>
+                            <input type="text" autocomplete="off" id="money" name="money"  />
+                            </p>
+                            <p>
+                            <label for="invest_money">누적투자유치금액</label>
+                            <input type="text" autocomplete="off" id="invest_money" name="invest_money"  />
+                            </p>
+                            <p>
+                            <label for="money_sale">영업이익 2020</label>
+                            <input type="text" autocomplete="off" id="money_sale" name="money_sale"  />
+                            </p>
+                            <p>
+                            <label for="money_sales">영업이익 2021</label>
+                            <input type="text" autocomplete="off" id="money_sales" name="money_sales"  />
+                            </p>
+                            <p>
+                            <label for="money_net">순이익 2020</label>
+                            <input type="text" autocomplete="off" id="money_net" name="money_net"  />
+                            </p>  
+                            <p>     
+                            <label for="money_nets">순이익 2021</label>
+                            <input type="text" autocomplete="off" id="money_nets" name="money_nets"  />
+                            </p>
+                            <p>
+                            <label for="asset">자산 2020</label>
+                            <input type="text" autocomplete="off" id="asset" name="asset"  />
+                            </p>
+                            <p>
+                            <label for="asset_a">자산 2021</label>
+                            <input type="text" autocomplete="off" id="asset_a" name="asset_a"  />
+                            </p>
+                            <p>
+                            <label for="capital">자본 2020</label>
+                            <input type="text" autocomplete="off" id="capital" name="capital"  />
+                            </p>
+                            <p>
+                            <label for="capital_a">자본 2021</label>
+                            <input type="text" autocomplete="off" id="capital_a" name="capital_a"  />
+                            </p>
+                            <p>
+                            <label for="sale">매출액 2020</label>
+                            <input type="text" autocomplete="off" id="sale" name="sale"  />
+                            </p>
+                            <p>
+                            <label for="sales">매출액 2021</label>
+                            <input type="text" autocomplete="off" id="sales" name="sales"  />
+                            </p>   
+                            <p>     
+                            <label for="invest_recent">최근투자유치</label>
+                            <input type="text" autocomplete="off" id="invest_recent" name="invest_recent"  />
+                            </p>
+                            <p>
+                            <label for="capital_erosion">자본잠식률</label>
+                            <input type="text" autocomplete="off" id="capital_erosion" name="capital_erosion"  />
+                            </p>
+                            <p>     
+                            <label for="year">년차</label>
+                            <input type="text" autocomplete="off" id="year" name="year"  />
+                            </p>
+                            <p>
+                            <label for="service">서비스/제품 수</label>
+                            <input type="text" autocomplete="off" id="service" name="service"  />
+                            </p>
+                            <p>     
+                            <label for="invest_count">투자유치횟수</label>
+                            <input type="text" autocomplete="off" id="invest_count" name="invest_count"  />
+                            </p>
+                            <p>
+                            <label for="scale">2022 시장규모</label>
+                            <input type="text" autocomplete="off" id="scale" name="scale"  />
+                            </p> 
+                            
+                            <h1 style=" box-sizing: border-box; font-size:30px; margin:10px">
+                                <input type="submit" style="width:270px; height:80px" value="predict">
+                            </h1>
+                    
+                    </div>
+                </form>
+            </div>
+            <div class="form-group" style="transform: translate( 1000px, 300px);">
+                <h2>  예상 매출액 : {{ a }}억 {{ c }}만원  </h2>
+            </div>
+            
+        </div>
+        </div>
+        {% endblock %}
+
+    </body>
+</html>

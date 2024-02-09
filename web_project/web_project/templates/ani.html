@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slider{
+            overflow:hidden;
+            position:relative;
+            border:5px solid green;
+            width:568px; 
+            height:403px;
+        }
+        .image_box{
+            width:100%;
+            /* //500px;  */
+            height:100%;
+            display:flex;
+            flex-wrap:nowrap;
+            animation: bannermove 10s linear infinite;
+        }
+        @keyframes bannermove {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-400%, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <div class="image_box">
+            <div><img src="/static/images/linear1.png" alt="graph01"></div>
+            <div><img src="/static/images/linear2.png" alt="graph01"></div>
+            <div><img src="/static/images/linear3.png" alt="graph01"></div>
+            <div><img src="/static/images/linear4.png" alt="graph01"></div>
+        </div>
+    </div>
+</body>
+</html>
